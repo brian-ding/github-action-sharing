@@ -1,11 +1,18 @@
 name: Github Action Sharing - Greetings from Brian
 
+env:
+  DAY_OF_WEEK: Monday
+
 on:
   push
 
 jobs:
   Greeting:
+    env:
+      GREETING: Hello
     runs-on: ubuntu-latest
     steps:
       - name: Say hello
-        run: echo "Hello Github Action"
+        env:
+          FULL_NAME: "Brian Ding"
+        run: echo "${{env.GREETING}} ${{env.FULL_NAME}}. Today is ${{env.DAY_OF_WEEK}}"
