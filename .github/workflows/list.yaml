@@ -1,0 +1,13 @@
+name: Github Action Sharing - List all files
+
+on:
+  push
+
+jobs:
+  List:
+    runs-on: ubuntu-latest
+    steps:
+        - name: List
+          run: ls -al
+        - name: WD
+          run: echo $(pwd)
