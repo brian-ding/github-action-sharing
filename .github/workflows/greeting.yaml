@@ -1,0 +1,11 @@
+name: Github Action Sharing - Greetings from Brian
+
+on:
+  push
+
+jobs:
+  Greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Hello Github Action"
